@@ -21,7 +21,7 @@ int final_print(const char *format, conver_t f_list[], va_list argument_list)
 			{
 				if(format[i + 1] == f_list[j].symbol[0])
 				{
-					r_val = f_list[j].function(arg_list);
+					r_val = f_list[j].function(argument_list);
 					if(r_val == -1)
 						return(-1);
 					chars_printed += r_val;
@@ -44,7 +44,7 @@ int final_print(const char *format, conver_t f_list[], va_list argument_list)
 		else
 		{
 			_write(format[i]);
-			chars_printe++;
+			chars_printed++;
 		}
 	}
 	return(chars_printed);
